@@ -1,0 +1,7 @@
+# Shared shortcuts — one per line: name=command
+# Both .bashrc (alias) and config.fish (abbr) read this file directly on startup.
+
+la=ls -A
+gs=git status
+gd=git diff
+gp=git push
