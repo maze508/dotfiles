@@ -4,7 +4,7 @@ One file for shortcuts, shared by Bash and Fish.
 
 ## Layout
 
-- **`aliases.def`** — your shortcuts, one per line: `name=command`. This is the only file you edit.
+- **`aliases.def`** — update shortcuts here, one per line: `name=command`. This is the only file you need to edit.
 - **`.bashrc`** — reads `aliases.def` on startup, creates a `bash alias` for each line.
 - **`config.fish`** — reads `aliases.def` on startup, creates a `fish abbr` for each line.
 - **`install.sh`** — symlinks configs into place.
@@ -32,5 +32,3 @@ source ~/.bashrc
 # In fish
 source ~/.config/fish/config.fish
 ```
-
-That's it. No build step, no sync script.
