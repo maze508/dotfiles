@@ -39,3 +39,6 @@ if status is-interactive
         end < ~/dotfiles/aliases.def
     end
 end
+
+starship init fish | source
+
