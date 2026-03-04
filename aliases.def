@@ -2,6 +2,11 @@
 # Both .bashrc (alias) and config.fish (abbr) read this file directly on startup.
 
 la=ls -A
-gs=git status
+ll=ls -lh
+ga=git add .
+gb=git branch
 gd=git diff
+gl=git log --oneline
 gp=git push
+gs=git status
+nv=nvim
