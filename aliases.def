@@ -1,6 +1,8 @@
 # Shared shortcuts — one per line: name=command
 # Both .bashrc (alias) and config.fish (abbr) read this file directly on startup.
 
+cc=claude
+ccd=IS_SANDBOX=1 claude --dangerously-skip-permissions
 la=ls -A
 ll=ls -lh
 lla=ls -la
