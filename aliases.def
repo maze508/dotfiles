@@ -3,6 +3,7 @@
 
 la=ls -A
 ll=ls -lh
+lla=ls -la
 ga=git add .
 gb=git branch
 gd=git diff
