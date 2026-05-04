@@ -1,11 +1,12 @@
 # Portable bashrc — symlink: ln -sf ~/dotfiles/.bashrc ~/.bashrc
 
-# $PS1 is the prompt string (e.g. "root@host:~$"). Bash only sets it in
-# interactive sessions (when a human is typing). If it's empty, we're
-# non-interactive (a script, scp, cron, etc.) and none of the stuff below
-# matters — so bail out early to avoid side effects.
-# -z means "is zero length", && means "if that was true, do this next thing".
-[ -z "$PS1" ] && return
+# $- is a string of active shell flags. Bash sets the 'i' flag when the shell
+# is interactive (a human is typing). If 'i' is absent we're non-interactive
+# (a script, scp, cron, etc.) and none of the stuff below matters — bail out
+# early to avoid side effects. This is more reliable than checking $PS1,
+# which may be empty even in interactive sessions depending on how the shell
+# was launched.
+case $- in *i*) ;; *) return ;; esac
 
 # -f tests "does this file exist and is it a regular file?"
 # We guard with this so bash doesn't error if aliases.def is missing.

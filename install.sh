@@ -17,7 +17,7 @@ cd "$DOTFILES"
 # Create a symlink: ~/.bashrc -> ~/dotfiles/.bashrc
 # ln = "link", -s = "symbolic" (symlink, not hardlink), -f = "force" (overwrite if exists).
 # After this, when bash opens ~/.bashrc on startup, the OS redirects it to
-# our repo copy at ~/dotfiles/.bashrc. One file, accessible from both paths.
+# our repo copy at ~/dotfiles/.bashrc.
 ln -sf "$DOTFILES/.bashrc" "$HOME/.bashrc"
 
 # Fish expects its config at ~/.config/fish/config.fish.
